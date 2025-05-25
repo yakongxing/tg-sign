@@ -12,7 +12,8 @@ RUN pip install /tmp/*.whl && \
 
 WORKDIR /opt/tg-signer
 
-RUN cp /etc/secrets/* . && \
+RUN ls /etc/secrets && \
+    cp /etc/secrets/* . && \
     tg-signer import -I emby_feiniu.config mytask
     
 CMD ["tg-signer", "run"]
