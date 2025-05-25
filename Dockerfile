@@ -15,4 +15,4 @@ WORKDIR /opt/tg-signer
 
 RUN tg-signer import -I emby_feiniu.config mytask
     
-ENTRYPOINT ["sh", "-c"]
+ENTRYPOINT ["sh", "./entrypoint.sh"]
